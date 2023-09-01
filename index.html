@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      color: white;
+    }
+
+    h1 {
+      color:black;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      font-size: 3rem;
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .pricing-plan {
+      width: 300px;
+      height: 400px;
+      border-radius: 25px;
+    }
+
+    .basic {
+      background: linear-gradient(#9D44C0, #EC53B0);
+      box-shadow: 0 0 30px 1px #933fb5 inset;
+    }
+
+    .standard {
+      background: linear-gradient(#4D2DB7,#9D44C0);
+      box-shadow: 0 0 30px 1px #38227e inset;
+
+    }
+
+    .premium {
+      background: linear-gradient(#0E21A0,#4474cb);
+      box-shadow: 0 0 30px 1px #12208a inset;
+    }
+
+    .plan-title,.plan-price {
+      text-align: center;
+    }
+
+    .plan-title {
+      font-size: 25px;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+
+    .pricenumber {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    hr {
+      border: 0;
+      padding-top: 1px;
+      background: linear-gradient(to right, transparent, #d0d0d5, transparent);
+      margin-top: 15px;
+    }
+
+    ul {
+      margin-top: 50px;
+      margin-left: 30px;
+      line-height: 25px;
+    }
+
+    button {
+      background-color: rgba(0,0,0,0);
+      border-radius: 7px;
+      width: 130px;
+      height: 30px;
+      color: white;
+      padding-bottom: 3px;
+      margin-left: 85px;
+      margin-top: 40px;
+    }
+
+    button:hover {
+      color: black;
+    }
+
+    button:active {
+      background-color:rgba(255,255,255,0.5);
+    }
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1000px) {
+      .pricing-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Gradient Pricetable</h1>
+  <div class="pricing-container">
+    <!-- BASIC -->
+    <div class="pricing-plan basic">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price"><span class="pricenumber">$9.99</span>/month</div>
+      <hr>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Certification</li>
+        <li>🚫 Support</li>
+      </ul>
+      <a href="basic.html"><button class="plan-button"><strong>Sign Up</strong></button></a>
+    </div>
+
+    <!-- STANDARD -->
+    <div class="pricing-plan standard">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price"><span class="pricenumber">$19.99</span>/month</div>
+      <hr>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Certification</li>
+        <li>✅ Email Support</li>
+      </ul>
+      <a href="standard.html"><button class="plan-button"><strong>Sign Up</strong></button></a>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="pricing-plan premium">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price"><span class="pricenumber">$49.99</span>/month</div>
+      <hr>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ Certification</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <a href="premium.html"><button class="plan-button"><strong>Sign Up</strong></button></a>
+    </div>
+  </div>
+
+</body>
+
+</html>
